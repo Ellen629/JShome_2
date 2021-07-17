@@ -62,12 +62,118 @@ console.log(sum) */
 
 
 // Edabit forth homework
-let result = 0;
-function mean(array){
-   for(let i = 0; i < array.length; i++){
-    result = result + array[i];
-  }
-  return result / array.length;
+// let result = 0;
+// function mean(array){
+//    for(let i = 0; i < array.length; i++){
+//     result = result + array[i];
+//   }
+//   return result / array.length;
+// }
+// console.log(mean([2, 3, 2, 3]));
+
+// function Accumulator(startingValue) {
+//   this.value =  0;
+//   this.read = () => {
+//   startingValue = +prompt('Enter a number');
+//   this.value += startingValue;
+//   }
+// }
+
+// let accumulator = new Accumulator(1);
+// accumulator.read()
+// alert(accumulator.value)
+
+//  function charCount(myChar, str) {
+// let letter = '';
+//   for(let i = 0; i < str.length; i++){
+//     if(str[i] === myChar) {
+//      letter++;
+//     }
+//   }
+//   return letter;
+// }
+// console.log(charCount("a", "aedabit")); 
+
+// function doubleChar(str) {
+//   let arr = Array.from(str);
+//   let newString = [];
+//     for(let i = 0; i < str.length; i++){
+//     newString.push(arr[i].repeat(2))
+//     }
+//     return newString.join("");
+//   }
+//   console.log(doubleChar("Google"))
+
+// function findNemo(sentence){
+// 	let strNemo = sentence.split(" ");
+//   for(let i = 0; i < strNemo.length; i++){
+//   	if(strNemo[i] === "Nemo"){
+//     	return `I found Nemo at ${i + 1}`
+//     }
+//   }
+//   return 'I cannot find Nemo'
+// }
+// console.log(findNemo("I Nemo am"))
+
+// function reverseOdd(str) {
+//   let lengthOfString = str.split(" ");
+//   for (let i = 0; i < lengthOfString.length; i++) {
+//     if (lengthOfString[] % 2 !== 0){
+//        lengthOfString[i].split('').reverse().join('')
+//     }
+//   }
+
+//   return lengthOfString[i]
+// }
+// console.log(reverseOdd("One two three four"))
+
+
+
+
+function insertWhitespace(s) {
+return s.split("").map((i, index)=>{
+if(index!==0)
+if(i === i.toUpperCase())
+ return " "+i;
+return i;
+}).join("");
 }
-console.log(mean([2, 3, 2, 3]));
+console.log(insertWhitespace("SheWalksToTheBeach")) 
+
+
+  
+function removeDups(arr) {
+  let uniqueChars = [];
+  arr.forEach((c) => {
+  if (!uniqueChars.includes(c)) {
+      uniqueChars.push(c);
+  }
+});
+return uniqueChars
+}
+console.log(removeDups([0, 1, 2, 3, 1, 5, 0]))
+
+// function singleOccurrence(str) {
+//   let uniqueLetter = '';
+//  let s= str.split("");
+//  s.forEach(letter => {
+//    if(letter === 1){
+//      uniqueLetter.push(letter).toUpperCase()
+//    }
+//  })
+//  return uniqueLetter
+// }
+// console.log(singleOccurrence("AABBcBBAA"))
+
+function singleOccurrence(str) {
+  let s = [...str.toUpperCase()];
+ return s.filter(x => s.indexOf(x) === s.lastIndexOf(x)).join("");
+}
+console.log(singleOccurrence("fscbafab"))  
+
+
+
+
+
+
 
